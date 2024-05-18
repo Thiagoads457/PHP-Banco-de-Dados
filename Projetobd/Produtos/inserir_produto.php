@@ -52,7 +52,7 @@
             if(inserirProduto($nome, $descricao, $valor, $categoria))
                 echo "Registro inserido com sucesso!";
             else
-                echo "Erro ao inserir o registro"
+                echo "Erro ao inserir o registro";
 
         }else {
             echo "Preencha todos os campos!";
