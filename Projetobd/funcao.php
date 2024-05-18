@@ -14,3 +14,7 @@
             return 0;
         }
     }
+
+    function inserirProduto($nome, $descricao, $valor, $categoria){
+        $sql = "INSERT INTO produto (nome, descricao, valor, categoria) VALUES (:nome, :descricao, :valor, :categoria)"
+    }
