@@ -31,3 +31,14 @@
 
         
     }
+
+    function retornarProdutos(){
+        try{
+           $sql = "SELECT p.*, c.descricao as Categoria FROM produto p INNER JOIN categoria c ON c.id = p.Categoria_id";
+           $conexao = conectarBanco();
+           return $conexao->query($sql);
+        } catch (Exception $e){
+            return 0;
+        }
+    }
+    #INSERT INTO categoria (descricao) VALUES ("Categoria 1"), ("Categoria 2"), ("Categoria 3")
