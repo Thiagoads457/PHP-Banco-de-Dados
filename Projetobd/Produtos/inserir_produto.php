@@ -1,6 +1,7 @@
 <?php
     require_once("../cabecalho.php");
 ?>
+
     <h3>Inserir Produto</h3>
     <form action="" method="POST">
         <div class="row">
@@ -23,24 +24,25 @@
         </div>
         <div class="row">
             <div class="col">
-                <label for="categoria" class="form-label">Selecione a categoria</label>
+                <label for="categoria" class="form-label"> Selecione a categoria</label>
                 <select class="form-select" name="categoria">
                     <?php
-                        $linhas = retornarCategorias();
-                        while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
-                            echo "<option value='{$l['id']}'>{$l['descricao']}</option>";
-                        }
+                       $linhas = retornarCategorias();
+                       while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
+                        echo "<option value='{$l['id']}'>{$l['descricao']}</option>";
+                       } 
                     ?>
                 </select>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <button type="submit" class="btn btn-success mt-3">Salvar</button>
+                <button type="submit" class="btn btn-success">
+                    Salvar
+                </button>
             </div>
         </div>
     </form>
-
 
 <?php
     if ($_POST){
@@ -49,14 +51,13 @@
         $valor = $_POST['valor'];
         $categoria = $_POST['categoria'];
         if($nome != "" && $descricao != "" && $valor != "" && $categoria != ""){
-            if(inserirProduto($nome, $descricao, $valor, $categoria))
+            if(inserirProduto($nome,$descricao,$valor,$categoria))
                 echo "Registro inserido com sucesso!";
             else
-                echo "Erro ao inserir o registro";
-
-        }else {
+                echo "Erro ao inserir o registro!";
+        } else {
             echo "Preencha todos os campos!";
         }
-     }
-    
+    }
     require_once("../rodape.html");
+

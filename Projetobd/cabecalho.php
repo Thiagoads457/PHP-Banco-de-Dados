@@ -8,37 +8,23 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Sistema PHP + MySql</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
-              <li class="nav-item">
-                <a class="nav-link" href="produtos/index.php">Produtos</a>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
-              <li class="nav-item">
-                <a class="nav-link" href="produtos/index.php">Ferramentas</a>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
-              <li class="nav-item">
-                <a class="nav-link" href="produtos/index.php">Camisetas</a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sistema PHP + MySql</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/produtos/index.php">Produtos</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <main class="container">
+      </div>
+    </nav>
+    <main class="container">
 <?php
   require_once("funcao.php");
-    if(conectarBanco()){
-      echo "Conexão realizada com sucesso!";
-    }
+
+  
