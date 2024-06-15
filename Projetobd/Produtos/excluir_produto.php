@@ -5,6 +5,7 @@
         $id = $_GET['id'];
         $_SESSION['id'] = $id;
     } 
+    
     if ($_POST){
         $id = $_SESSION['id'];
         if(excluirProduto($_SESSION['id']))
